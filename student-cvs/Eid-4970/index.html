@@ -7,18 +7,18 @@
     <meta charset="UTF-8">
     <title>Segundo Ejercicio HTML</title><!--titulo en la pestaña del navegador-->
 
-    <link rel="stylesheet" href="/main.css"> <!--llamamos el archivo .css para dar estilo a la pagina-->
+    <link rel="stylesheet" href="/styles.css"> <!--llamamos el archivo .css para dar estilo a la pagina-->
     <link rel="icon" href="Astronauta.jpg"> <!--imagen de pestaña-->
 
 </head>
 
-<body>
-    <main>
+<body class="pagina">
+    <main><!--encabezado-->
 
 
         <!-- <strong> es para negrilla-->
         <header>
-            <h1>Hola, mi Nombre es <em>Eider Vargas.</em></h1>
+            <h1 class="encabezado_secundario">Hola, mi Nombre es <em>Eider Vargas.</em></h1>
             <!--<img src="/Archivos/Astronauta.jpg"  alt="Esta es una foto de Astronuta">-->
 
 
@@ -32,8 +32,8 @@
         </header>
     </main>
     <hr><!--linea horizontal de separacion-->
-    <section>
-        <h1> Pasatiempos y gustos: </h1>
+    <section><!--pasatiempos-->
+        <h1 class="encabezado_secundario"> Pasatiempos y gustos: </h1>
         <article>
             <header>
                 <h2>Programacion:</h2>
@@ -65,8 +65,7 @@
             </ul>
             <p>Mi alias favorito es <em>cargar</em> que hice para hacer push a los repositorios y es el siguiente: </p>
             <code>alias cargar='git push -u origin main'</code>
-            <p><strong> este mi link de <em>GitHub</em> </strong> <a href="https://github.com/Eidvargas96">Eider
-                    Vargas</a>
+            <p>Este mi link de <strong> </strong> <a href="https://github.com/Eidvargas96"><em>GitHub</em></a>
             </p>
         </article>
         <article>
@@ -81,7 +80,9 @@
                     distancia del telescopio y poder seguir mi pasaiempo sin importar en donde me encuentre.
                 </p>
             </header>
-            <a href="Archivos/Astronuta.html">Foto de Astronauta</a>
+            <aside>
+                <a href="Archivos/Astronuta.html">Foto de Astronauta</a>
+            </aside>
         </article>
         <article>
             <header>
@@ -98,8 +99,9 @@
 
 
     </section>
-    <section>
-        <h1>
+    <hr>
+    <section><!--mi trabajo-->
+        <h1 class="encabezado_secundario">
             Mi Trabajo:
         </h1>
         <p>
@@ -139,6 +141,77 @@
             </header>
         </article>
     </section>
+    <hr>
+    <section>
+        <h1 class="encabezado_secundario">
+            Hablemos un poco:
+        </h1>
+        <p>
+            Tu eliges el tema y profundizamos sobre el.
+        </p>
+
+        <h2>Dime un poco de ti:</h2>
+
+        <form c>
+            <div>
+                <label for="name"> Nombre</label>
+                <input id="name" type="text" placeholder="Escribe tu nombre" required>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Email" required>
+            </div>
+
+            <div>
+                <label for="tema">Tema</label>
+                <select id="tema" class="selector">
+                    <option selected disabled>Selecciona Uno</option>
+                    <option>Trabajo</option>
+                    <option>Astronimia</option>
+                    <option>Ciclismo</option>
+
+                </select>
+            </div>
+
+            <div>
+                <label for="Descripcion"> Descripcion</label>
+                <textarea id="Descripcion" placeholder="Cuentame uno de tus pasatiempos favoritos." rows="5"></textarea>
+
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Dia</legend>
+                    <input id="Sabado" type="radio" name="dia">
+                    <label for="Sabado">Sabado</label>
+
+                    <input id="Domingo" type="radio" name="dia">
+                    <label for="Domingo">Domingo</label>
+
+                    <input id="Lunes_Festivo" type="radio" name="dia">
+                    <label for="Lunes_Festivo">Lunes Festivo</label>
+
+                    <div class="help">Indica que dia te queda mejor.</div>
+
+                </fieldset>
+            </div>
+            <div>
+                <labe for="botton"></labe>
+                <button id="botton">
+                    ENVIAR
+                </button>
+            </div>
+
+        </form>
+
+    </section>
+    <div class="pie_de_pagina">
+        <footer>
+
+            Ultima Actualizacion: 16/06/2023
+        </footer>
+    </div>
+
 </body>
 
 </html>
